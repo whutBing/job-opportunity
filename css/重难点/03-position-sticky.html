@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 2px solid #000;
+            margin-bottom: 40px;
+        }
+
+        .sticky2 {
+            position: sticky;
+            position: -webkit-sticky;
+            background-color: red;
+        }
+
+        .div3 {
+            overflow: hidden;
+            /*   overflow: auto; */
+        }
+
+        .sticky1,
+        .sticky3,
+        .sticky4 {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0px;
+            background-color: red;
+        }
+
+        .div4 {
+            overflow: scroll;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <h2 class="sticky1">失败的粘性定位一：未设置 top / bottom / left / right 其一</h2>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+    </div>
+    <div class="div2">
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <h2 class="sticky2">失败的粘性定位一：未设置 top / bottom / left / right 其一</h2>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+    </div>
+    <div class="div3">
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <h2 class="sticky3">失败的粘性定位二： 父元素设置overflow: auto / overflow: hidden</h2>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+    </div>
+    <div class="div4">
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <h2 class="sticky4">失败的粘性定位三： 父元素设置 overflow: scroll 但不给定明确的宽高（例如 height: auto; / height: 100%;）</h2>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+        <p>我是父元素</p>
+    </div>
+</body>
+
+</html>
