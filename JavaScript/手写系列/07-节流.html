@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Throttled Scroll Event</title>
+    <style>
+      body {
+        height: 2000px; /* 设置一个长页面以便滚动 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Throttled Scroll Event Demo</h1>
+
+    <!-- 在这里放置其他内容 -->
+
+    <script>
+      function throttle(fn, delay) {
+        let timer = null;
+        return function (...args) {
+          if (!timer) {
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = null;
+            }, delay);
+          }
+        };
+      }
+
+      var count = 0,
+        count1 = 0;
+      function handleScroll() {
+        count++;
+        console.log("Scroll event processed", count);
+      }
+
+      function handleScroll1() {
+        count1++;
+        console.log("Scroll-1 event processed", count1);
+      }
+      const throttledHandleScroll = throttle(handleScroll, 500);
+
+      window.addEventListener("scroll", throttledHandleScroll);
+      window.addEventListener("scroll", handleScroll1);
+    </script>
+  </body>
+</html>
