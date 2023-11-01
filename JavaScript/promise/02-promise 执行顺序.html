@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        //                                         执行顺序
-        setTimeout(() => {
-            console.log(0)                           // 9
-        }, 0);
-        new Promise((resolve, reject) => {
-            console.log(1);                          // 1
+      //                                         执行顺序
+      setTimeout(() => {
+        console.log(0); // 9
+      }, 0);
+      new Promise((resolve, reject) => {
+        console.log(1); // 1
+        resolve();
+      })
+        .then(() => {
+          console.log(2); // 3
+          new Promise((resolve, reject) => {
+            console.log(3); // 4
             resolve();
-        }).then(() => {
-            console.log(2);                          // 3
-            new Promise((resolve, reject) => {
-                console.log(3);                      // 4
-                resolve();
-            }).then(() => {
-                console.log(4);                     // 6
-            }).then(() => {
-                console.log(5);                     // 8
+          })
+            .then(() => {
+              console.log(4); // 6
             })
-        }).then(() => {
-            console.log(6)                          // 7
+            .then(() => {
+              console.log(5); // 8
+            });
         })
-        new Promise((resolve, reject) => {
-            console.log(7);                         // 2 
-            resolve();
-        }).then(() => {
-            console.log(8)                          // 5
-        })
+        .then(() => {
+          console.log(6); // 7
+        });
+      new Promise((resolve, reject) => {
+        console.log(7); // 2
+        resolve();
+      }).then(() => {
+        console.log(8); // 5
+      });
     </script>
-</body>
-
+  </body>
 </html>

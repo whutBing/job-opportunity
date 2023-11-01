@@ -52,7 +52,7 @@ class MyPromise {
           };
 
     var thenPromise = new MyPromise((resolve, reject) => {
-      const reslovePromise = (cb) => {
+      const resolvePromise = (cb) => {
         try {
           const x = cb(this.promiseResult);
           if (x === thenPromise) {
@@ -101,7 +101,7 @@ class MyPromise {
 //   (err) => console.log(err)
 // );
 
-const test3 = new Promise((resolve, reject) => {
+const test3 = new MyPromise((resolve, reject) => {
   resolve(100); // 输出 状态：成功 值： 200
   // reject(100) // 输出 状态：成功 值：300
 })
@@ -114,7 +114,7 @@ const test3 = new Promise((resolve, reject) => {
     (err) => console.log("失败", err)
   );
 
-const test4 = new Promise((resolve, reject) => {
+const test4 = new MyPromise((resolve, reject) => {
   resolve(100); // 输出 状态：失败 值：200
   // reject(100) // 输出 状态：成功 值：300
   // 这里可没搞反哦。真的搞懂了，就知道了为啥这里是反的
