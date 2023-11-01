@@ -30,4 +30,4 @@ per1.say(); // Hello
 per2.say(); // Hello
 
 // 2. __proto__
-console.log(per1.__proto__ === Person.prototype);
+console.log(per1.__proto__ === Person.prototype); // true

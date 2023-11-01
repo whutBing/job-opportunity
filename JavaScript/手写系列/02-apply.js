@@ -1,4 +1,4 @@
-Function.prototype.myBind = function (ctx, args) {
+Function.prototype.myApply = function (ctx, args) {
   ctx = ctx ? Object(ctx) : window;
   ctx.fn = this;
   let res = args ? ctx.fn(...args) : ctx.fn();
@@ -16,4 +16,4 @@ function Dod() {
 }
 
 const a = new Dod();
-say.myCall(a, [1, 2, 3, 4]);
+say.myApply(a, [1, 2, 3, 4]);

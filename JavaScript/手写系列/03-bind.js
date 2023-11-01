@@ -18,15 +18,15 @@ Function.prototype.myBind = function (ctx, ...args) {
 };
 
 // 调用方式一：
-function greet(name) {
-  console.log(`Hello, ${name}! I'm ${this.name}.`);
-}
+// function greet(name) {
+//   console.log(`Hello, ${name}! I'm ${this.name}.`);
+// }
 
-const person = { name: "Alice" };
+// const person = { name: "Alice" };
 
-const boundGreet = greet.myBind(person, "Bob");
+// const boundGreet = greet.myBind(person, "Bob");
 
-boundGreet(); // 输出 "Hello, Bob! I'm Alice."
+// boundGreet(); // 输出 "Hello, Bob! I'm Alice."
 
 // 调用方式二： 通过 new构造
 function Dog(name) {
@@ -40,4 +40,4 @@ Dog.prototype.bark = function () {
 const boundConstructor = Dog.myBind(null, "Max"); // 绑定了上下文为 null，参数为 "Max"
 const dog = new boundConstructor();
 
-// dog.bark(); // 输出：Max is barking!
+dog.bark(); // 输出：Max is barking!

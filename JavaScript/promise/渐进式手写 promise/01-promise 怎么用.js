@@ -1,8 +1,8 @@
-// let p = new Promise
-let p = new Promise((resolve, reject) => {
-  resolve("成功");
-  reject("失败");
-});
+// refer: https://juejin.cn/post/6994594642280857630
+// let p = new Promise((resolve, reject) => {
+//   resolve("成功");
+//   reject("失败");
+// });
 
 class MyPromise {
   constructor(executor) {
