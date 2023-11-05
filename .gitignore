@@ -82,3 +82,5 @@ Thumbs.db
 .DS_Store
 npm/template/webInterface.js
 npm/template/miniapp_template.zip
+React/code/05_learn_redux/pnpm-lock.yaml
+React/code/03_learn_component/src/index.js
