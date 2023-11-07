@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>button</button>
+    <script>
+      "use strict";
+      // 1. 全局对象
+      console.log("1.全局", this);
+      // 2. 严格模式/非严格模式
+      function fun() {
+        console.log("2", this); // window
+      }
+      fun();
+
+      const btn = document.getElementById("testId");
+      btn.addEventListener("click", function () {
+        console.log("3", this); // <button id="testId">按钮</button>
+      });
+    </script>
+  </body>
+</html>
