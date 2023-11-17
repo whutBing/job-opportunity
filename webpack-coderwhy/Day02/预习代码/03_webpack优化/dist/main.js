@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_01_webpack_server=self.webpackChunk_01_webpack_server||[]).push([[179],{160:function(e,s,n){var o=axios,c=n.n(o);console.log("foo function"),c().get("/api/users/list").then((e=>{console.log("index result:",e)}))}},function(e){var s;s=160,e(e.s=s)}]);

@@ -1,0 +1,15 @@
+body {
+  background-color: skyblue;
+}
+
+button {
+  color: red;
+}
+
+.title {
+  font-size: 20px;
+}
+
+html {
+  font-size: 20px;
+}

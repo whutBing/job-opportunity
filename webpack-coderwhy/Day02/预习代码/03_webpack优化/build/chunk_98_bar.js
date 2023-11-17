@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_01_webpack_server=self.webpackChunk_01_webpack_server||[]).push([[98],{322:function(e,n,o){function c(){console.log("bar function execution")}o.r(n),o.d(n,{bar:function(){return c}}),n.default=function(){console.log("foo function execution~~~~")}}}]);

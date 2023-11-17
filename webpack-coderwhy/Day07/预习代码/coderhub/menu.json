@@ -1,0 +1,8 @@
+{
+  "name": "系统总览",
+  "type": 1,
+  "icon": "xxx",
+  "url": "/main/analysis",
+  "parentId": 0,
+  "permission": ""
+}
